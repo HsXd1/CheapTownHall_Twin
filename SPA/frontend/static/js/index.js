@@ -1,5 +1,6 @@
 import Dashboard from "./views/Dashboard.js";
 import Home from "./views/home.js";
+import DuoPage from "./views/DuoPage.js";
 
 const navigateTo = url => {
 	history.pushState(null, null, url);
@@ -9,6 +10,7 @@ const navigateTo = url => {
 const router = async () => {
 	const routes = [
 		{ path: "/", view: Dashboard },
+		{ path: "/duoPage", view: DuoPage },
 		{ path: "/home", view: Home }
 	];
 
@@ -52,4 +54,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	router();
+});
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+	event.preventDefault();
+
+	const bronconame = document.getElementById("bronconame").value;
+	const password = document.getElementById("password").value;
+
+	console.log("Bronco name: " + bronconame);
+	console.log("Bronco name: " + password);
 });
