@@ -9,8 +9,7 @@ const navigateTo = url => {
 const router = async () => {
 	const routes = [
 		{ path: "/", view: Dashboard },
-		{ path: "/login", view: () => console.log("viewing login") },
-		{ path: "/home", view: Home },
+		{ path: "/home", view: Home }
 	];
 
 	// test each rout for potential match
@@ -39,6 +38,8 @@ const router = async () => {
 
 window.addEventListener("popstate", router);
 
+let match = false;
+
 // for clicking on text links
 document.addEventListener("DOMContentLoaded", () => {
 	document.body.addEventListener("click", e => {
@@ -46,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			e.preventDefault();
 			navigateTo(e.target.href);
 		}
+
+		if (e.target.id === "twin") match = true;
 	});
 
 	router();

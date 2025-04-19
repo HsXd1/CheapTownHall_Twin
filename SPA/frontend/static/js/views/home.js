@@ -25,8 +25,8 @@ export default class extends Abstract {
     <span>💻 Computer Science</span>
   </div>
   <div class="buttons">
-    <button class="nah">NAH!</button>
-    <button class="twin">TWIN!</button>
+    <a href="/home" class="nah" data-link>NAH!</a>
+    <a href="/info" id="twin" class="twin" data-link>TWIN!</a>
   </div>
 </div>
 	   `;
