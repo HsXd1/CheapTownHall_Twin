@@ -10,7 +10,7 @@ var password = "AshPoly435!";
 
 //initializes browser for background work
 async function initBrowser(){
-    const browser = await puppeteer.launch({headless: false});
+    const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
     await page.goto(url);
     return page;
