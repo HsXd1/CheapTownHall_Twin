@@ -3,8 +3,8 @@ import puppeteer from 'puppeteer';
 const url = "https://cpp.joinhandshake.com/login"
 
 //inputs (assign your bronco name and password for testing)
-var broncoName = "exampleName";
-var password = "examplePassword";
+var broncoName = "aprabu";
+var password = "AshPoly435!";
 
 //initializes browser for background work
 async function initBrowser(){
@@ -40,13 +40,30 @@ async function scroll(page){
     delay(1000);
     await page.waitForSelector("button[class='sc-dkBdza fdbBmQ sc-hTRxPq jpnxkN']");
     await page.$eval("button[class='sc-dkBdza fdbBmQ sc-hTRxPq jpnxkN']", elem => elem.click());
-    //await page.click('a:contains("Jobs")');
-    //await page.click("body > div:nth-child(4) > div:nth-child(3) > nav > div.sc-gVzlyS.sc-geOqsp.fnXCXm.bimUMF > div:nth-child(5) > a")
-    //await page.waitForSelector("#bootstrapping-follows-modal > div > div > div.sc-kQQmxC.eWgHxr > div.sc-gtXJFL.fdPUUJ > button")
-    //await page.click("#bootstrapping-follows-modal > div > div > div.sc-kQQmxC.eWgHxr > div.sc-gtXJFL.fdPUUJ > button")
-    //await page.waitForSelector("body > div:nth-child(4) > div:nth-child(3) > nav > div.sc-gVzlyS.sc-geOqsp.fnXCXm.bimUMF > div:nth-child(5) > a");
-    //await page.click("body > div:nth-child(4) > div:nth-child(3) > nav > div.sc-gVzlyS.sc-geOqsp.fnXCXm.bimUMF > div:nth-child(5) > a");
+    await page.waitForSelector('nav');
+    const links = await page.$$('nav a');
+
+    for (const link of links) {
+        const text = await page.evaluate(el => el.textContent?.trim(), link);
+        if (text === 'Jobs') {
+            await link.click();
+            break;
+        }
+    }
+
+    /*jobListings = await page.$$('div[data-qa="job-card"]');
+    for(let i = 0; i < jobListings.length; i++){
+        jobListing = jobListing[i];
+        await jobListing.click();
+        //const company = jobListing.$evaluate(elem => elem.textContent, )
+    }
+    */
+   //await page.$eval("class='sc-gzrROc ephvTB'", elem => elem.click())
+   //not enough time to account for multiple listings
 }
+
+
+
 
 //main method 
 async function getInPls(){
