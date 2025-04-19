@@ -1,6 +1,8 @@
 import Dashboard from "./views/Dashboard.js";
 import Home from "./views/home.js";
 import DuoPage from "./views/DuoPage.js";
+import Reddit from "./views/reddit.js";
+import TwinAcorn from "./views/TwinAcorn.js";
 
 const navigateTo = url => {
 	history.pushState(null, null, url);
@@ -11,7 +13,9 @@ const router = async () => {
 	const routes = [
 		{ path: "/", view: Dashboard },
 		{ path: "/duoPage", view: DuoPage },
-		{ path: "/home", view: Home }
+		{ path: "/home", view: Home },
+		{ path: "/reddit", view: Reddit},
+		{ path: "/TwinAcorn", view: TwinAcorn},
 	];
 
 	// test each rout for potential match
@@ -55,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			match = true;
 		}
 	});
-  
+
 	// for twin up button (login)
 	document.body.addEventListener("submit", e => {
 		if (e.target.id === "loginForm") {

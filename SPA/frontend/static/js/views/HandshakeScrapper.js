@@ -5,8 +5,8 @@ console.log("Activated.");
 const url = "https://cpp.joinhandshake.com/login"
 
 //inputs (assign your bronco name and password for testing)
-var broncoName = "aprabu";
-var password = "AshPoly435!";
+var broncoName = "jalazarte";
+var password = "navjow-1rofxY-nirkih";
 
 //initializes browser for background work
 async function initBrowser(){
