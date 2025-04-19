@@ -5,8 +5,8 @@ console.log("Activated.");
 const url = "https://cpp.joinhandshake.com/login"
 
 //inputs (assign your bronco name and password for testing)
-var broncoName = "aprabu";
-var password = "AshPoly435!";
+var broncoName;
+var password;
 
 //initializes browser for background work
 async function initBrowser(){
@@ -16,6 +16,7 @@ async function initBrowser(){
     return page;
 }
 
+//delay function
 function delay(time){
     return new Promise(function(resolve){
         setTimeout(resolve,time)
@@ -32,9 +33,7 @@ async function login(page){
     console.log("Check duo for approval");
     await page.waitForNavigation();
     await page.waitForSelector("#trust-browser-button");
-    await page.click("#trust-browser-button");
-    //await page.waitForNavigation();
-
+    await page.click("#trust-browser-button");    
 }
 
 //scrolls through job listings
@@ -52,22 +51,13 @@ async function scroll(page){
             break;
         }
     }
-
-    /*jobListings = await page.$$('div[data-qa="job-card"]');
-    for(let i = 0; i < jobListings.length; i++){
-        jobListing = jobListing[i];
-        await jobListing.click();
-        //const company = jobListing.$evaluate(elem => elem.textContent, )
-    }
-    */
-   //await page.$eval("class='sc-gzrROc ephvTB'", elem => elem.click())
-   //not enough time to account for multiple listings
+    await page.waitForNavigation();
+    delay(1000)
+    await page.waitForSelector('input[role="combobox"], input[type="text"]', { visible: true });
+    await page.type('input[role="combobox"], input[type="text"]', 'Los Angeles');
+    await page.keyboard.press('Enter');
 }
 
-
-
-
-//main method
 async function getInPls(){
     const page = await initBrowser();
     await login(page);
