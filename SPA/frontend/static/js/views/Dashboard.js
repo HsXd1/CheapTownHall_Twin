@@ -41,9 +41,10 @@ export default class extends Abstract {
 
 				<label for="password">Password:</label>
 				<input type="password" id="password" name="password" placeholder="...">
-
-				<button type="submit" class="btn">TWIN UP!</button>
 				</form>
+			</div>
+			<div class="btn-wrapper">
+				<button type="submit" class="btn">TWIN UP!</button>
 			</div>
 		</html>
         `;
