@@ -1,5 +1,7 @@
 import puppeteer from 'puppeteer';
 
+console.log("Activated.");
+
 const url = "https://cpp.joinhandshake.com/login"
 
 //inputs (assign your bronco name and password for testing)

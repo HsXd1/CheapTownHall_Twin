@@ -55,13 +55,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	router();
 });
-
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-	event.preventDefault();
-
-	const bronconame = document.getElementById("bronconame").value;
-	const password = document.getElementById("password").value;
-
-	console.log("Bronco name: " + bronconame);
-	console.log("Bronco name: " + password);
-});
