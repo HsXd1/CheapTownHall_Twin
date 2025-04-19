@@ -53,13 +53,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		if (e.target.id === "twin") {
 			match = true;
-		} else if(e.target.id === "loginForm") {
+		}
+	});
+
+	// for twin up button (login)
+	document.body.addEventListener("submit", e => {
+		if (e.target.id === "loginForm") {
 			e.preventDefault();
 			bronconame = document.getElementById("bronconame").value;
 			password = document.getElementById("password").value;
 
-			console.log("Bronco name: " + bronconame);
-			console.log("Bronco name: " + password);
+			console.log("Stored user/pass:", bronconame, password);
+			navigateTo("/duoPage");
 		}
 	});
 
