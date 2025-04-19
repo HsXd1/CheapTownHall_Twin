@@ -2,7 +2,7 @@
 ### CheapTownHall's Project for Bronco Hacks 2025
 
 **Link to Project:** [localhost:8000](http://localhost:8000)  
-**Live Demo:** *Coming soon!*
+**Live Demo:** [https://www.loom.com/share/ea8a1d6c79a649529dc7424e7db36b3f?sid=5b803516-a39f-4c4c-a194-635b1a0310ba](https://www.loom.com/share/ea8a1d6c79a649529dc7424e7db36b3f?sid=5b803516-a39f-4c4c-a194-635b1a0310ba)
 
 ---
 
