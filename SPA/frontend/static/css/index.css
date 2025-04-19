@@ -61,6 +61,11 @@ body {
 	border-radius: 1rem;
 }
 
+.twinName {
+	font-size: 3rem;
+	font-family: 'Delicious Handrawn', cursive;
+}
+
 .title {
 	font-size: 3rem;
 	font-family: 'Comic Sans MS', cursive, sans-serif;
