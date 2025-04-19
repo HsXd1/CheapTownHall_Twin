@@ -1,37 +1,144 @@
 body {
-    --nav-width: 200px;
-    margin: 0 0 0 var(--nav-width);
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
+	font-family: "Delicious Handrawn", cursive;
+	font-size: 18px;
+	background: #292929;
 }
 
+h1 {
+	color: white;
+	font-size: 100px;
+	font-weight: 100;
+	align-items: auto;
+	justify-content: auto;
+}
+
+
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: var(--nav-width);
-    height: 100vh;
-    background: #222222;
+	font-family: 'Quicksand', sans-serif;
+	width: 189.75px;
+	height: 115.5px;
+	background: #4a8b4a;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .nav__link {
-    display: block;
-    padding: 12px 18px;
-    text-decoration: none;
-    color: #eeeeee;
-    font-weight: 500;
+	display: flex;
+	padding: 12px 18px;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 500;
 }
 
 .nav__link:hover {
-    background: rgba(255, 255, 255, .05);
+	background: rgba(255, 255, 255, .05);
 }
 
 #app {
-    margin: 2em;
-    line-height: 1.5;
-    font-weight: 500;
+	line-height: 1.5;
+	font-weight: 500;
 }
 
 a {
-    color: #009579;
+	color: #009579;
 }
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #1e1e1e;
+	font-family: 'Courier New', Courier, monospace;
+	color: white;
+	padding: 2rem;
+   }
+
+   .card {
+	background: #1e1e1e;
+	text-align: center;
+	max-width: 320px;
+	padding: 1.5rem;
+	border-radius: 1rem;
+   }
+
+   .title {
+	font-size: 3rem;
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+	margin-bottom: 1rem;
+   }
+
+   .company {
+	background-color: #6cc24a;
+	padding: 0.4rem 1rem;
+	border-radius: 10px;
+	display: inline-block;
+	margin-bottom: 1rem;
+   }
+
+   .logo img {
+	background-color: #6cc24a;
+	padding: 1rem;
+	border-radius: 1.2rem;
+	width: 80px;
+	height: 80px;
+	margin-bottom: 1rem;
+   }
+
+   .role {
+	background-color: #6cc24a;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+   }
+
+   .pay-label {
+	margin-top: 1rem;
+	font-size: 1.1rem;
+   }
+
+   .pay {
+	background-color: #6cc24a;
+	padding: 0.3rem 1rem;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+	font-weight: bold;
+   }
+
+   .tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.3rem;
+	margin-bottom: 1.5rem;
+   }
+
+   .tags span {
+	background-color: #ccc;
+	color: black;
+	padding: 0.3rem 0.6rem;
+	border-radius: 5px;
+	font-size: 0.8rem;
+   }
+
+   .buttons {
+	display: flex;
+	justify-content: space-around;
+   }
+
+   button {
+	font-size: 1.5rem;
+	padding: 0.5rem 1.2rem;
+	border-radius: 1.5rem;
+	border: none;
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+	cursor: pointer;
+   }
+
+   .nah {
+	background-color: #ff5b5b;
+	color: white;
+   }
+
+   .twin {
+	background-color: #59e6c2;
+	color: white;
+   }
