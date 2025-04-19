@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			match = true;
 		}
 	});
-
+  
 	// for twin up button (login)
 	document.body.addEventListener("submit", e => {
 		if (e.target.id === "loginForm") {
@@ -70,4 +70,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	router();
 });
-	
