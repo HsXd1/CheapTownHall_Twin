@@ -41,6 +41,7 @@ const router = async () => {
 window.addEventListener("popstate", router);
 
 let match = false;
+var bronconame, password;
 
 // for clicking on text links
 document.addEventListener("DOMContentLoaded", () => {
@@ -50,18 +51,22 @@ document.addEventListener("DOMContentLoaded", () => {
 			navigateTo(e.target.href);
 		}
 
-		if (e.target.id === "twin") match = true;
+		if (e.target.id === "twin") {
+			match = true;
+		}
+	});
+  
+	// for twin up button (login)
+	document.body.addEventListener("submit", e => {
+		if (e.target.id === "loginForm") {
+			e.preventDefault();
+			bronconame = document.getElementById("bronconame").value;
+			password = document.getElementById("password").value;
+
+			console.log("Stored user/pass:", bronconame, password);
+			navigateTo("/duoPage");
+		}
 	});
 
 	router();
-});
-
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-	event.preventDefault();
-
-	const bronconame = document.getElementById("bronconame").value;
-	const password = document.getElementById("password").value;
-
-	console.log("Bronco name: " + bronconame);
-	console.log("Bronco name: " + password);
 });

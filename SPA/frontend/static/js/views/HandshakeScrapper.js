@@ -1,5 +1,7 @@
 import puppeteer from 'puppeteer';
 
+console.log("Activated.");
+
 const url = "https://cpp.joinhandshake.com/login"
 
 //inputs (assign your bronco name and password for testing)
@@ -24,7 +26,7 @@ function delay(time){
 //scrapes data from inputs in site to do login in function (duo needed)
 async function login(page){
     await page.click("#ui-id-1 > div:nth-child(1) > div.sso-button-wrapper > a");
-    await page.waitForNavigation();    
+    await page.waitForNavigation();
     await page.type("input[id='username']", broncoName);
     await page.type("input[id='password']", password);
     await page.$eval("button[type='submit']", elem => elem.click());
@@ -56,7 +58,6 @@ async function scroll(page){
     await page.keyboard.press('Enter');
 }
 
-//main method 
 async function getInPls(){
     const page = await initBrowser();
     await login(page);
