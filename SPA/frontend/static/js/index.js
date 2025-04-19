@@ -1,3 +1,5 @@
+import Dashboard from "./views/Dashboard.js";
+
 const navigateTo = url => {
     history.pushState(null, null, url);
     router();
@@ -5,7 +7,7 @@ const navigateTo = url => {
 
 const router = async () => {
     const routes = [
-        { path: "/", view: () => console.log("viewing dashboard") },
+        { path: "/", view: Dashboard },
         { path: "/login", view: () => console.log("viewing login") }
     ];
 
@@ -27,11 +29,15 @@ const router = async () => {
         };
     }
 
-    console.log(match.route.view());
+    // displays view page
+    const view = new match.route.view();
+
+    document.querySelector("#app").innerHTML = await view.getHtml();
 };
 
 window.addEventListener("popstate", router);
 
+// for clicking on text links
 document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", e => {
         if (e.target.matches("[data-link]")) {
