@@ -23,7 +23,7 @@ function delay(time){
 //scrapes data from inputs in site to do login in function (duo needed)
 async function login(page){
     await page.click("#ui-id-1 > div:nth-child(1) > div.sso-button-wrapper > a");
-    await page.waitForNavigation();    
+    await page.waitForNavigation();
     await page.type("input[id='username']", broncoName);
     await page.type("input[id='password']", password);
     await page.$eval("button[type='submit']", elem => elem.click());
@@ -32,7 +32,7 @@ async function login(page){
     await page.waitForSelector("#trust-browser-button");
     await page.click("#trust-browser-button");
     //await page.waitForNavigation();
-    
+
 }
 
 //scrolls through job listings
@@ -65,7 +65,7 @@ async function scroll(page){
 
 
 
-//main method 
+//main method
 async function getInPls(){
     const page = await initBrowser();
     await login(page);

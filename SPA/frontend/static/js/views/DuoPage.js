@@ -13,9 +13,7 @@ export default class extends Abstract {
 			<h1> Look at your phone and press duo!~ </h1>
 			<div class="buttons">
 			<a href="/home" class="nah" data-link>Next</a>
-
  			 </div>
-			<script src = "../../../../../HandshakeScrape/HandshakeScrapper.js"> </script>
 	   `;
 	}
 }
